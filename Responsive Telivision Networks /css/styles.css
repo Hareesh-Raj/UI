@@ -3,40 +3,40 @@
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
-header p
+header h1
 {
    text-align: center;
    padding: 30px;
    background-color: #145f94;
-   font-size: 20px;
+   font-size: 21.5px;
    color: white;
    font-weight: 500;
 }
 .leftSide{
     float: left;
-    width: 60%;
+    width: 62.5%;
    padding-right:20px ;
 }
 .rightSide{
     float: right;
-    width: 40%;
-    
+    width: 37.5%;   
 }
 section{
     margin: 36px auto 110px;
-    width:80%;
-    
+    width:83%;
+   
 }
 .heading{
     color: white;
     background-color: #145f94;
-    padding: 20px;
-    font-size: 20px;
+    padding: 16.5px;
+    padding-left: 24.5px;
+    font-size: 20.5px;
     font-weight: 500;
 
 }
 .content{
-    padding: 20px;
+    padding: 23px;
     line-height: 1.5;
     font-weight: 400;
     text-align: justify;
