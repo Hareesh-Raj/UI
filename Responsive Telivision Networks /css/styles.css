@@ -1,7 +1,9 @@
 *{
     margin: 0;
-    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
 }
 header h1
 {
@@ -12,12 +14,12 @@ header h1
    color: white;
    font-weight: 500;
 }
-.leftSide{
+.left-side{
     float: left;
     width: 62.5%;
    padding-right:20px ;
 }
-.rightSide{
+.right-side{
     float: right;
     width: 37.5%;   
 }
@@ -54,12 +56,11 @@ section{
 
 @media only screen and (max-width:576px)
 {
-   
-    .leftSide{
-       width: 100%;
-       padding-right: 0;
+    .left-side{
+        width: 100%;
+        padding-right: 0;
     }
-    .rightSide{
+    .right-side{
         width: 100%;
     }
 }
