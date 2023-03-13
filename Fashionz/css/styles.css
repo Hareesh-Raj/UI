@@ -126,15 +126,15 @@ section {
   background-color: #87b181;
   right: 25px;
 
-  top: 380px;
+  top: 375px;
   height: 60px;
   width: 60px;
 }
 .card-image-size p {
   padding-top: 15px;
 
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 500;
 }
 .image {
   width: 80%;
