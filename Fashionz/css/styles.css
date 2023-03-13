@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #2a2b30;
+  font-family: "Roboto", sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+header {
+  margin: 45px 118px 0 143px;
+}
+.logo img {
+  float: left;
+  height: 70px;
+  position: relative;
+  top: 35px;
+}
+
+.menu {
+  height: 90px;
+  width: 70px;
+  position: relative;
+  float: right;
+  top: 22px;
+}
+
+.menu-logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+  position: absolute;
+  z-index: 1;
+}
+
+.menu-items {
+  width: 260px;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  left: -190px;
+  top: 83px;
+  padding: 10px 15px;
+  display: none;
+  z-index: 2;
+}
+.menu-items li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  font-weight: 600;
+}
+
+.menu:hover .menu-items {
+  display: inline-block;
+}
+.menu-items:hover {
+  display: inline-block;
+}
+
+.menu-items li a:hover {
+  background-color: #d8d8d8;
+}
+.clear-fix {
+  clear: both;
+}
+section {
+  margin: 70px 118px 0 143px;
+}
+.card {
+  position: relative;
+  width: 22%;
+  display: inline-block;
+  margin-right: 4%;
+}
+.card-icon {
+  position: absolute;
+  color: #87b181;
+  font-size: 20px;
+  top: 18px;
+  right: 25px;
+}
+.card-image {
+  position: relative;
+  background-color: #24252a;
+
+  padding: 80px 50px;
+}
+.card2 > .card-image {
+  padding: 75px 60px;
+}
+.card3 > .card-image {
+  padding: 80px 40px;
+}
+.card3 > .card-image > .image {
+  width: 100%;
+}
+.card4 > .card-image > .image {
+  width: 100%;
+}
+.card4 > .card-image {
+  padding: 75px 55px;
+}
+.card3 > .card-image > .image > img {
+  height: 240px;
+}
+.card2 > .card-image > .image > img {
+  height: 250px;
+}
+.card4 > .card-image > .image > img {
+  height: 250px;
+}
+
+.card-image-size {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #87b181;
+  right: 25px;
+
+  top: 380px;
+  height: 60px;
+  width: 60px;
+}
+.card-image-size p {
+  padding-top: 15px;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+.image {
+  width: 80%;
+  margin: auto;
+}
+.image > img {
+  height: 240px;
+}
+
+.product-name {
+  font-size: 25px;
+  font-weight: 300;
+  color: #ffffff;
+  padding-top: 15px;
+}
+.product-price {
+  font-size: 22px;
+  font-weight: 300;
+  color: #aaaaaa;
+  padding-top: 5px;
+}
+.button {
+  margin-top: 10px;
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.button li {
+  list-style: none;
+}
+.button ul li a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: solid 1px #aaaaaa;
+  color: #aaaaaa;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  text-align: center;
+  width: 100%;
+}
+.footer p {
+  display: inline-block;
+  padding: 42px 28px;
+  font-size: 21px;
+  font-weight: 500;
+  color: white;
+}
