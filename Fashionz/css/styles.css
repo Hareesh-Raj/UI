@@ -93,31 +93,13 @@ section {
   position: relative;
   background-color: #24252a;
 
-  padding: 80px 50px;
+  padding: 90px 20px;
 }
-.card2 > .card-image {
-  padding: 75px 60px;
+.image {
+  text-align: center;
 }
-.card3 > .card-image {
-  padding: 80px 40px;
-}
-.card3 > .card-image > .image {
-  width: 100%;
-}
-.card4 > .card-image > .image {
-  width: 100%;
-}
-.card4 > .card-image {
-  padding: 75px 55px;
-}
-.card3 > .card-image > .image > img {
-  height: 240px;
-}
-.card2 > .card-image > .image > img {
-  height: 250px;
-}
-.card4 > .card-image > .image > img {
-  height: 250px;
+.image > img {
+  max-height: 240px;
 }
 
 .card-image-size {
@@ -126,7 +108,7 @@ section {
   background-color: #87b181;
   right: 25px;
 
-  top: 375px;
+  top: 392px;
   height: 60px;
   width: 60px;
 }
@@ -135,13 +117,6 @@ section {
 
   font-size: 24px;
   font-weight: 500;
-}
-.image {
-  width: 80%;
-  margin: auto;
-}
-.image > img {
-  height: 240px;
 }
 
 .product-name {
@@ -162,9 +137,7 @@ section {
   font-size: 16px;
   font-weight: 600;
 }
-.button li {
-  list-style: none;
-}
+
 .button ul li a {
   display: inline-block;
   padding: 10px 20px;
