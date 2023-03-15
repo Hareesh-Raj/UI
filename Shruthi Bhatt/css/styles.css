@@ -34,7 +34,7 @@ header {
   right: 10.3%;
   font-weight: 500;
 }
-section:not(.logos) {
+section {
   width: 79%;
   margin: 9% auto 0;
 }
@@ -73,10 +73,10 @@ section:not(.logos) {
 .logos div {
   width: 16.666666666%;
   text-align: center;
-  padding: 15px;
+  padding: 15px 6px;
 }
 .logos div img {
-  max-height: 75px;
+  max-height: 80px;
   max-width: 100%;
 }
 .line {
@@ -89,7 +89,8 @@ section:not(.logos) {
 
 .line > div {
   display: inline-block;
-  border: solid 0.5px #cecece;
+  border: solid 1px #cecece;
+  border-radius: 5px;
 }
 div.line :first-child {
   width: 40px;
@@ -177,12 +178,19 @@ div.line :first-child {
     max-height: 80px;
     max-width: 100%;
   }
+  div.line :first-child{
+    width: 34px;
+  }
+  div.line :last-child{
+    width:187px;
+  }
   .social-icons {
     justify-content: space-around;
+    margin:12.4% 4.5%;
   }
   .social-icons div {
-    width: 81px;
-    height: 81px;
+    width: 78px;
+    height: 78px;
     font-size: 2.78em;
   }
   .credits {
