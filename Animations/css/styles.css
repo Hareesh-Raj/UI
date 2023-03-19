@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#hills-image{
+    height: 100vh;
+    animation: hills 10s linear infinite;
+}
+#moon{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 300px;
+}
+#moon-cover{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 51.5%;
+    top: 325px;
+    border-radius: 50%;
+    background-color: #071e47;
+     animation: mooncover 10s linear infinite;
+}
+@keyframes hills{
+   0%{
+    height: 100vh;
+   }
+   25%{
+    height: 110vh;
+   }
+   50%{
+    height: 120vh;
+   }
+   60%{
+    height: 135vh;
+   }
+   75%{
+    height: 150vh;
+   }
+   100%{
+    height: 175vh;
+   }
+}
+img{
+    width: 100%;
+    height: 100vh;
+}
+@keyframes mooncover {
+    0%{
+        
+        transform: translate(0,0);
+       }
+    100%{
+        left: 55%;
+        transform: translate(80px,-80px);
+       }
+}
