@@ -6006,12 +6006,47 @@ const friends_list=[{
 }
 ];
 
-let display_data ="";
-for (let data of friends_list){
-    display_data += "<div class='tag'>";
-    display_data += "<div class='image'> <img src="+data["img"]+" alt='profile image'/> </div>";
-    display_data += "<div class='data'> <p>"+data["first_name"]+" <span>"+data["last_name"]+"</span></p>";
-    display_data += "<p id='email'>"+data["email"]+"</p></div>";
-    display_data += "</div>";
+// let display_data ="";
+// for (let data of friends_list){
+//     display_data += "<div class='tag'>";
+//     display_data += "<div class='image'> <img src="+data["img"]+" alt='profile image'/> </div>";
+//     display_data += "<div class='data'> <p>"+data["first_name"]+" <span>"+data["last_name"]+"</span></p>";
+//     display_data += "<p id='email'>"+data["email"]+"</p></div>";
+//     display_data += "</div>";
+// }
+// document.getElementById("friends-list").innerHTML=display_data;
+
+const friend_list = document.getElementById("friends-list");
+const fragment = new DocumentFragment();
+
+friends_list.forEach(displayList);
+
+function displayList(data)
+{
+    // Adding image div
+        const add_image = document.createElement("div");
+        add_image.classList.add("image");
+        const image = document.createElement("img");
+        image.setAttribute("src",data["img"]);
+        image.setAttribute("alt","Profile Image");
+        add_image.appendChild(image);
+    // Adding name and email div
+        const add_data = document.createElement("div");
+        const first_name = document.createElement("p");
+        first_name.innerText=data["first_name"];
+        const last_name = document.createElement("span");
+        last_name.innerText = data["last_name"];
+        first_name.appendChild(last_name);
+        add_data.appendChild(first_name);
+        const email = document.createElement("p");
+        email.id="email";
+        email.innerText = friends_list[0]["email"];
+        add_data.appendChild(email);
+    // Adding the final tag
+        const tag = document.createElement("div");
+        tag.classList.add("tag");
+        tag.appendChild(add_image);
+        tag.appendChild(add_data);
+        fragment.appendChild(tag);
 }
-document.getElementById("friends-list").innerHTML=display_data;
+friend_list.appendChild(fragment);
