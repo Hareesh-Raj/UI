@@ -40,7 +40,7 @@
     align-items: center;
     height: 90vh;
     color: #ffffff;
-     background-color: #000000;
+     background-color: #000;
   }
   
   .application-layer p {
@@ -71,8 +71,8 @@
     width: 218px;
     background-color: inherit;
     padding: 14px;
-    font-size: 21px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 900;
     color: #ffffff;
     border: 2px solid #ffffff;
     border-radius: 5px;
@@ -140,11 +140,15 @@
   /* input layer */
   
   .inputField {
-   margin: 52px auto 55px;
+    margin: 52px auto 55px;
     background-color: inherit;
     border: 2px solid #fff;
-    font-size: 68px;
+    font-size: 45px;
     color: #fff;
+    padding: 13px;
+    height: 90px;
+    width: 16em;
+    text-align: center;
   }
   
   /* output layer */
@@ -177,7 +181,6 @@
   
   .result-table td:nth-child(3) {
     background-color: #3188ff;
-    width: 140px;
   }
 
 #startButton{
