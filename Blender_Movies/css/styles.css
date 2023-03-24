@@ -44,6 +44,7 @@ img {
 body {
   background-color: #f5f5f5;
 }
+
 #heading {
   font-weight: 600;
   font-size: 18.5px;
@@ -147,7 +148,7 @@ footer {
 }
 #copyrights-symbol {
   font-size: 18px;
-  margin: 4px;
+  margin: 4px 0 0 0;
 }
 .ruler {
   border: 0.5px solid #d6d6d6;
@@ -155,7 +156,10 @@ footer {
 .responsive-ruler{
     display: none;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 767px) {
+  body{
+    background-color: #fff;
+  }
   .header-content {
     width: 90%;
   }
@@ -186,6 +190,7 @@ footer {
   main {
     flex-flow: column;
     align-items: center;
+    max-width: 1300px;
   }
   #chat-icon{
     right: 29px;

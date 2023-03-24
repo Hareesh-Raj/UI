@@ -2,7 +2,9 @@ import videoData from "./video.json" assert { type: "json" };
 import posterData from "./posters.json" assert { type: "json" };
 console.log(videoData);
 console.log(posterData);
-
+/**
+ * @description This function addHeaderDetails() function will set the username and userprofile image 
+ */
 function addHeaderDetails()
 {
   const username = document.getElementById("username");
@@ -15,7 +17,9 @@ function addHeaderDetails()
 }
 
 const videoContainer = document.getElementById("video-content");
-
+/**
+ * @description This function addVideoDetails() will get the videodata from the json and this comes to the left part of the main container.
+ */
 function addVideoDetails() {
   //adding video
   const video = document.createElement("video");
@@ -92,9 +96,16 @@ function addVideoDetails() {
   videoContainer.appendChild(commentsSection);
   videoContainer.appendChild(responsive_ruler);
 }
+/**
+ * 
+ * @description This addupcomingProjects() used to create and display the upcoming projects section
+ */
 function addupcomingProjects()
 {
   const upcomingProjectsSection = document.getElementById("upcoming-projects");
+  /**
+   * Iterating the posterData json data and displaying the data.
+   */
   for (let poster of posterData) {
   const project_image = document.createElement("div");
   project_image.classList.add("project-image");
@@ -105,6 +116,7 @@ function addupcomingProjects()
   upcomingProjectsSection.appendChild(project_image);
     }
 }
+//Here the function calls are carried out in the following manner.
 addHeaderDetails();
 addVideoDetails();
 addupcomingProjects();
