@@ -16,9 +16,10 @@ span{
     margin-bottom: 32px;
     display: block;
     font-weight: 500;
+    letter-spacing: 1px;
 }
 #reduce-size{
-    margin-bottom: 20px;
+    margin: 40px 0 22px;
 }
 p{
     font-size: 11px;
@@ -33,7 +34,7 @@ p{
     margin: -46px 0px -50px;
 }
 .logo img{
-    height: 230px;
+    height: 220px;
 }
 section{
     display: flex;
@@ -72,18 +73,19 @@ section{
 }
 #completeButton{
     width: 100%;
-    padding:10px 20px;
+    padding: 14px 20px;
     background-color: #001c72;
     color: white;
     font-size: 15px;
     border-radius: 5px;
     cursor: pointer;
+    border: 0;
 }
 .error-box{
     border-color: #a80001 !important;
 }
 .error-content{
-    margin-top: 4px;
+    margin: 4px 0 0;
     color: #a80001 !important;
     font-weight: 400;
 }
