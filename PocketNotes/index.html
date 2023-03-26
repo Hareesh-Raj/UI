@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pocket Notes</title>
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- external font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div id="header-content">
+        <div id="logo-content" class="remove-special-style">
+          <div id="back-btn" class="hide"><i class="fa-solid fa-arrow-left"></i></div>
+          <span id="header-logo">Pocket Notes</span>
+        </div>
+        <div id="header-buttons">
+          <button id="delete-all-btn" class="hide">DELETE ALL</button>
+          <button id="new-btn" class="hide">NEW</button>
+          <button id="delete-btn"class="hide" >DELETE</button>
+          <button id="edit-btn" class="hide">EDIT</button>
+        </div>
+      </div>
+    </header>
+    <main>
+        <!-- Empty notes container starts here -->
+      <div id="empty-notes" class="hide">
+        <div class="empty-cube-image">
+          <img src="./images/cube.png" alt="cube image" />
+        </div>
+        <span id="empty-notes-content"> Notes you add appear here </span>
+      </div>
+      <!-- Empty notes container ends here -->
+
+      <!-- Pocket notes container starts here -->
+      <div id="pocket-notes" class="hide">
+         <!--  notes container starts here -->
+       
+      </div>
+      <!-- Pocket notes container ends here -->
+    </main>
+    <!-- Full notes container starts here -->
+    <section id="display-full-notes-container" class="hide"></section>
+     <!-- Full notes container ends here -->
+      <!-- Footer starts here -->
+    <footer>
+      <div id="footer-button" class="hide">
+        <button id="load-more-btn">LOAD MORE</button>
+      </div>
+    </footer>
+     <!-- Footer Ends here -->
+    <!-- new notes section starts here -->
+    <div id="new-notes-section" class="hide">
+        <div class="new-notes-input-section">
+            <div class="confirm-content-cancel">
+                <span id="new-confirm-content">NEW NOTE</span>
+                    <i id="cancel-btn" class="fa-solid fa-xmark"></i>
+            </div>
+            <form action="" id="add-new-notes-form" method="post">
+                <input type="text" autocomplete="off" name="inputTitle" id="input-title" placeholder="Notes Title">
+                <span class="error-content" class="hide" id="title-error"></span>
+                
+                <input type="text" name="imageUrl" id="image-url" autocomplete="off" placeholder="Add Image URL">
+                <textarea name="notesContent" id="notesContent" cols="30" rows="10" placeholder="Add Content Here" ></textarea>
+                <span class="error-content" class="hide" id="content-error"></span>
+                <div class="form-footer">
+                    <div class="colors-container">
+                        <div class="color" id="color-1">
+                            <i class="fa-solid fa-check tick-icon "></i>
+                        </div>
+                        <div class="color" id="color-2">
+                            <i class="fa-solid fa-check tick-icon hide"></i>
+                        </div>
+                        <div class="color" id="color-3">
+                            <i class="fa-solid fa-check tick-icon hide"></i>
+                        </div>
+                        <div class="color" id="color-4">
+                            <i class="fa-solid fa-check tick-icon hide"></i>
+                        </div>
+                        <div class="color" id="color-5">
+                            <i class="fa-solid fa-check tick-icon hide"></i>
+                        </div>
+                    </div>
+                    <button type="submit" id="add-btn" class="disabled-btn hide"  disabled>ADD</button>
+                    <button type="submit" id="save-btn" class="hide">SAVE</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- new notes section ends here -->
+    <!-- confirm section starts here -->
+    <div id="confirm-section" class="hide">
+        <div class="confirm-part">
+            <div class="confirm-content-cancel">
+                <span id="confirm-content"></span>
+                <i id="confirm-cancel-btn" class="fa-solid fa-xmark"></i>
+            </div>
+                <span id="delete-btn-description"></span>
+                <button id="yes-delete-btn"></button>
+        </div>
+    </div>
+    <!-- confirm section starts here -->
+    
+     <!-- Jquery link -->
+     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+      <!-- External JS  link-->
+    <script src="./js/script.js" type="module"></script>
+  
+</body>
+</html>
