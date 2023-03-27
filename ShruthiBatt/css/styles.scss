@@ -1,3 +1,4 @@
+@import "mixins";
 $color_1: #ffffff;
 $color_2: #cecece;
 $color_3: #4990e2;
@@ -6,14 +7,7 @@ $font-family: "Roboto", sans-serif;
 $background-color: #000;
 $border-color: #cecece;
 
-@mixin flex{
-	display: flex;
-}
-@mixin flex-center{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+
 * {
 	margin: 0;
 	padding: 0;
