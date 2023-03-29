@@ -36,6 +36,7 @@
       <div id="empty-notes" class="hide">
         <div class="empty-cube-image">
           <img src="./images/cube.png" alt="cube image" />
+         
         </div>
         <span id="empty-notes-content"> Notes you add appear here </span>
       </div>
@@ -67,11 +68,11 @@
             </div>
             <form action="" id="add-new-notes-form" method="post">
                 <input type="text" autocomplete="off" name="inputTitle" id="input-title" placeholder="Notes Title">
-                <span class="error-content" class="hide" id="title-error"></span>
+                <span class="error-content" id="title-error">Title Should Not be empty</span>
                 
                 <input type="text" name="imageUrl" id="image-url" autocomplete="off" placeholder="Add Image URL">
                 <textarea name="notesContent" id="notesContent" cols="30" rows="10" placeholder="Add Content Here" ></textarea>
-                <span class="error-content" class="hide" id="content-error"></span>
+                <span class="error-content" id="content-error">Title Should Not be empty</span>
                 <div class="form-footer">
                     <div class="colors-container">
                         <div class="color" id="color-1">

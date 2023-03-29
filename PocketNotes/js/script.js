@@ -1,3 +1,7 @@
+import {displayEmptyContainer,hideEmptyContainer} from "./emptyContainerFunctions.js";
+import {disableScroll,enableScroll} from "./ScrollFunctions.js";
+import {displayConfirmContainer,hideConfirmContainer} from "./confirmSectionFunction.js";
+import {inputConfirmModal,deleteModal,deleteAllModal,hideModalContent} from "./ModalContent.js"
 //The codes starts here.
 $(document).ready(function () {
   // this variable is used to store the data from the local storage.
@@ -36,10 +40,7 @@ $(document).ready(function () {
   const confirmCancelButton = $("#confirm-cancel-btn");
   const yesDeleteButton = $("#yes-delete-btn");
   const cancelButton = $("#cancel-btn");
-  // modal content
-  const confirmContent = $("#confirm-content");
-  const confirmDescription = $("#delete-btn-description");
-  const buttonContent = $("#yes-delete-btn");
+  
   //used for verifying whether the 10 items are rendered while load more is clicked.
   let footercount = 10;
   //this will check whether local storage is null or not and display accordingly.
@@ -121,25 +122,18 @@ $(document).ready(function () {
     inputValid = false;
     contentValid = false;
   }
-  // we are disabling the scroll
-  function disableScroll() {
-    $("body").css("overflow-y", "hidden");
-  }
-  // we are enabling the scroll
-  function enableScroll() {
-    $("body").css("overflow-y", "visible");
-  }
+  
   //we are adding the event listeners to the input field and validating the fields.
   $("#input-title").on("click change", function (e) {
     if ($("#input-title").val() == "") {
       $("#title-error").text("Title Should Not be empty");
-      $("#title-error").removeClass("hide");
+      $("#title-error").css("visibility","visible");
       inputValid = false;
     } else if ($("#input-title").val().length > 100) {
       $("#title-error").text("Exceeded (Max-length:100)");
       inputValid = false;
     } else {
-      $("#title-error").addClass("hide");
+      $("#title-error").css("visibility","hidden");
       inputValid = true;
       newInputData["title"] = $("#input-title").val();
       canDisplayBtn();
@@ -148,10 +142,12 @@ $(document).ready(function () {
   $("#notesContent").on("click change", function (e) {
     if ($("#notesContent").val() == "") {
       $("#content-error").text("Content is required");
-      $("#content-error").removeClass("hide");
+      $("#content-error").css("visibility","visible");
       contentValid = false;
     } else {
-      $("#content-error").addClass("hide");
+     
+     
+      $("#content-error").css("visibility","hidden");
       contentValid = true;
       canDisplayBtn();
       newInputData["content"] = $("#notesContent").val();
@@ -204,17 +200,7 @@ $(document).ready(function () {
     resetDisplayButton();
     $("#add-new-notes-form").trigger("reset");
   });
-  // this function displays the empty container
-
-  function displayEmptyContainer() {
-    $(emptyNotes).removeClass("hide");
-    $(newButton).removeClass("hide");
-  }
-  // this function hides the empty container
-  function hideEmptyContainer() {
-    $(emptyNotes).addClass("hide");
-    $(newButton).addClass("hide");
-  }
+  
   // this function displays the new container where we can add new notes.
   function displayNewContainer() {
     $(newNotesSection).removeClass("hide");
@@ -238,43 +224,7 @@ $(document).ready(function () {
     $(addButton).addClass("hide");
     enableScroll();
   }
-  // this will display the confirm modal
-  function displayConfirmContainer() {
-    $(confirmSection).removeClass("hide");
-    disableScroll();
-  }
-  // this will hide the confirm modal
-  function hideConfirmContainer() {
-    $(confirmSection).addClass("hide");
-    enableScroll();
-  }
-
-  // we are adding the text to the and creating the input modal.
-  function inputConfirmModal() {
-    confirmContent.text("CONFIRM");
-    confirmDescription.text(
-      "Seems like you are in the middle of adding/editing content. Do you want to leave?"
-    );
-    yesDeleteButton.text("YES, CLOSE");
-  }
-  // we are adding the text to the and creating the delete modal.
-  function deleteModal() {
-    confirmContent.text("DELETE NOTE");
-    confirmDescription.text("Are you sure you want to delete this note?");
-    yesDeleteButton.text("YES, DELETE");
-  }
-  // we are adding the text to the and creating the deleteAll modal.
-  function deleteAllModal() {
-    confirmContent.text("DELETE ALL NOTE");
-    confirmDescription.text("Are you sure you want to delete all notes");
-    yesDeleteButton.text("YES, DELETE");
-  }
-  //We are hiding and resetting the Modal Content.
-  function hideModalContent() {
-    confirmContent.text("");
-    confirmDescription.text("");
-    yesDeleteButton.text("");
-  }
+ 
   //Adding a functionality to the newButton.
   $(newButton).click(function () {
     displayNewContainer();
